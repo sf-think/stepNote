@@ -1,0 +1,22 @@
+{
+	"name": "@stepnote/config",
+	"version": "0.1.0",
+	"private": true,
+	"exports": {
+		"./tsconfig/base": "./tsconfig/base.json",
+		"./tsconfig/nextjs": "./tsconfig/nextjs.json",
+		"./tsconfig/nestjs": "./tsconfig/nest.json",
+		"./tsconfig/react-library": "./tsconfig/react-library.json",
+		"./tailwind": "./tailwind/base.ts"
+	},
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"tailwindcss": "^4.1.18",
+		"typescript": "^5.9.3",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^4.0.15"
+	}
+}
