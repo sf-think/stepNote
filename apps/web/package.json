@@ -1,27 +1,47 @@
 {
-  "name": "@stepnote/web",
-  "version": "0.1.0",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --port 3000",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint --max-warnings 0",
-    "check-types": "next typegen && tsc --noEmit"
-  },
-  "dependencies": {
-    "@stepnote/ui": "workspace:*",
-    "next": "^16.0.7",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
-  },
-  "devDependencies": {
-    "@stepnote/typescript-config": "workspace:*",
-    "@types/node": "^22.15.3",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
-    "eslint": "^9.39.1",
-    "typescript": "5.9.2"
-  }
+	"name": "@stepnote/web",
+	"version": "0.1.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --port 3000",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"check-types": "next typegen && tsc --noEmit",
+		"test": "vitest",
+		"test:watch": "vitest --watch"
+	},
+	"dependencies": {
+		"@clerk/nextjs": "^6.36.2",
+		"@stepnote/ui": "workspace:*",
+		"@tailwindcss/postcss": "^4.1.18",
+		"@tanstack/react-query": "^5.90.12",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.560.0",
+		"next": "^16.0.7",
+		"postcss": "^8.5.6",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"tailwind-merge": "^3.4.0",
+		"tailwindcss": "^4.1.18",
+		"zustand": "^5.0.9"
+	},
+	"devDependencies": {
+		"@stepnote/config": "workspace:*",
+		"@testing-library/dom": "^10.4.1",
+		"@testing-library/jest-dom": "^6.9.1",
+		"@testing-library/react": "^16.3.0",
+		"@types/node": "^22.15.3",
+		"@types/react": "19.2.7",
+		"@types/react-dom": "19.2.3",
+		"@vitejs/plugin-react": "^5.1.2",
+		"eslint": "^9.39.1",
+		"jsdom": "24",
+		"typescript": "5.9.2",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^4.0.15"
+	}
 }
