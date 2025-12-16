@@ -12,13 +12,17 @@
 		"test:e2e": "turbo run test:e2e",
 		"format": "biome check --write .",
 		"check-types": "turbo run check-types",
-		"prepare": "husky"
+		"prepare": "husky",
+		"generate:openapi": "tsx scripts/generate-openapi.ts",
+		"lint:api": "pnpm generate:openapi && spectral lint openapi.json"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
 		"@commitlint/cli": "^20.2.0",
 		"@commitlint/config-conventional": "^20.2.0",
 		"@commitlint/types": "^20.2.0",
+		"@stoplight/spectral-cli": "^6.15.0",
+		"@ts-rest/open-api": "^3.52.1",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.7",
 		"tsx": "^4.21.0",
