@@ -5,8 +5,6 @@ on:
     workflows: ["CI"]
     types: [completed]
     branches: [main]
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -21,7 +19,7 @@ jobs:
           key: ${{ secrets.ECS_SSH_KEY }}
           script: |
             set -e
-            cd /home/murphy/stepNote
+            cd ${{ secrets.ECS_DEPLOY_PATH }}
             git pull origin main
             docker compose up -d --build
             docker image prune -f
